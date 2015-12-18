@@ -15,14 +15,19 @@
             <div style="margin-right: 5%">Обратная связь</div>
         </a>
         <?php
-        $admin='Natasha';
-        if(isset($_SESSION["name"])&& $_SESSION["name"]==$admin)
-            echo '<a href="newArticle.php">
-                    <div>Добавить новость</div>
+        //$admin='Natasha';
+        if(isset($_SESSION["name"])&& $_SESSION["name"]=='Natasha')
+            echo '<a href="addNewArticle.php">
+                    <div style="margin-right: 5%">Добавить статью</div>
                 </a>';
-         if(isset($_SESSION["name"])&& $_SESSION["name"]!=$admin)
-            echo '<a href="newArticle.php">
-                    <div>Предложить новость</div>
+        if(isset($_SESSION["name"])&& $_SESSION["name"]=='Natasha')
+//тут еще надо добавить условие есть ли предложенная идея
+            echo '<a href="listIdeas.php">
+                    <div>Предложенные идеи для статей</div>
+                </a>';
+        if(isset($_SESSION["name"])&& $_SESSION["name"]!='Natasha')
+            echo '<a href="addIdeaArticle.php">
+                    <div>Предложить идею для статьи</div>
                 </a>';
         ?>
         

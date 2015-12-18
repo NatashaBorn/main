@@ -43,7 +43,7 @@
                                 <div class="more">Далее</div>
                                 </a>';
                                 echo '<a href="myOffice.php?id='.$row["id"].'">
-                                    <input name="unLike" type="submit" value="Удалить" onClick="alert(\'Вы delete запись в личный кабинет!\')">
+                                    <input name="delete" type="submit" value="Удалить" onClick="alert(\'Вы delete запись в личный кабинет!\')">
                                     </a>';
                                 ?>
                           
@@ -57,7 +57,7 @@
                 </div>
                 <script>
                     $(document).ready(function() {
-                        $("#unLike").click(function() {
+                        $("#delete").click(function() {
                             <?php 
                             $id=$_GET['id'];
                             if($_SESSION[".$id."]===$value){unset($_SESSION[".$id."]);}

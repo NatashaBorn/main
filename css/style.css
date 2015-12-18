@@ -88,7 +88,7 @@ header #logo img{
 
 header #menuHead{
     height: 40%;
-    width: 50%;
+    width: 100%;
     float: left;
 }
 header #menuHead div{
@@ -206,7 +206,7 @@ header #regAuth{
     background-color: beige;
 }
 
-#wrapper #leftCol input,#wrapper #leftCol button{
+#wrapper #leftCol input,#wrapper #leftCol button,#wrapper #leftCol select{
     width: 40%;
     margin-left: 25%;
     float: left;
