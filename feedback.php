@@ -41,20 +41,6 @@
                     });
                     
                     /*$(document).ready(function(){
-                        $("#like").click(function(){
-                            var id=$_GET['id'].val();
-                        $.post("http://sites/www/myOffice.php)",{
-                            $_GET['id']:id
-                        },
-                            function(data){
-                                $("#alert").html(data);
-                        })
-                    })*/
-                    
-                    
-                    
-                    
-                    /*$(document).ready(function(){
                        $("#done").click(function(){
                           var name=$("#name").val();
                           var email=$("#email").val();

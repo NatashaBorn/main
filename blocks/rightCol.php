@@ -3,7 +3,10 @@
        <?php require_once "authorization.php"?> 
     </div>
     <div class="banner">
-        <img src="img/banner_2.jpg." alt="Баннер 2" title="Баннер 2">
+        <form  method="POST" action="search.php">
+            <input type="text" name="search" placeholder="Найти..." required><br>
+            <input type="submit" name="enter" value="Найти" onclick=""><br>
+         </form>
     </div>
 </div>
 
