@@ -6,7 +6,6 @@
         $title="Информация о нас";
         require_once "blocks/head.php";
         ?>
-        <script src="js/jquery.js"></script>
                 
     </head>
     <body>
@@ -25,6 +24,15 @@
 			}
                     $id=$_GET['id'];
                     $type=$_GET['type'];
+                    $click=$_GET['click'];
+                    
+                    if(isset($_GET['click'])&&$click=='add'&&!isset($_SESSION[".$id."])){
+                        $_SESSION[".$id."] = $id;
+                    }
+                    
+                    if(($_SESSION[".$id."]===$id)&&$click=='delete'){
+                                unset($_SESSION[".$id."]);
+                            }
                     
                     if(isset($_GET)){
                         $result=mysql_query("SELECT * FROM articles WHERE type = '$type' and id=$id");
@@ -44,27 +52,21 @@
                         /*echo '
                             <button id="like">Добавить в избранное</button> 
                         ';*/
-                        echo '<a href="article.php?type='.$type.'&id='.$row["id"].'">
-                        <input name="like" type="submit" value="Добавить в избранное" onClick="alert(\'Вы добавили запись в личный кабинет!\')">
+                        echo '<a href="article.php?type='.$type.'&id='.$row["id"].'&click=add">
+                            <div>Добавить в избранное</div>
                         </a>';
                     }
                     elseif (isset($_SESSION["name"])&&isset($_SESSION[".$id."])) {
-                        echo 'Эта новость уже есть в вашем личном кабинете!';
+                        echo '<a href="article.php?type='.$type.'&id='.$row["id"].'&click=delete">
+                                <div>Delete</div>
+                            </a>';
                     }
                     else{
                         echo '*Чтобы добавить запись в личный кабинет необходимо зарегистрироваться';}
                         ?>
                         
                     </div>
-                <script>
-                    $(document).ready(function() {
-                        $("#like").click(function() {
-                            <?php $_SESSION[".$id."] = $id;?>       
-                            );
-                        });
-                    });
-                </script>
-                                                  
+                                   
             </div>
             <?php require_once "blocks/rightCol.php"?>
         </div>

@@ -18,21 +18,38 @@
                 unset($_SESSION["name"]);
             }
             
+            if(isset($_POST["addIdeaArticle"])){
+                
+                
+            }
+            if(isset($_SESSION["name"])&&($_SESSION["name"])==='Natasha'){
+                echo 'Добро пажаловать на свой сайт !<br>
+                <form  method="post" action="index.php">
+                    <a href="myOffice.php">Мой кабинет</a><br>
+                    <a href="ListIdeas.php">Предложенные идеи для статьи</a><br>
+                    <a href="addNewArticle.php">Добавить новую статью</a><br>
+                    <input type="submit" name="exit" value="Выход"><br>
+                </form>';
+                
+                
+            }
             
-            if(isset($_SESSION["name"])){
-                echo 'Ты зашел!<br>
-                <form  method="post" action="myOffice.php">
-                    <input type="submit" name="myOffice" value="Мой кабинет"><br>
+            elseif(isset($_SESSION["name"])&&($_SESSION["name"])!='Natasha'){
+                echo $_SESSION["name"], 
+                    '<br>Добро пожаловать на наш сайт!<br>
+                <form  method="post" action="index.php">
+                    <a href="myOffice.php">Мой кабинет</a><br>
+                    <a href="addIdeaArticle.php">Предложить идею для статьи</a><br>
                     <input type="submit" name="exit" value="Выход"><br>
                 </form>';
                 
                 
             }
             else{
-                echo '<form  method="post" action="">
-            <input type="text" name="e_login" placeholder="Login" required><br>
-            <input type="password" name="e_password" placeholder="Password" required><br>
-            <input type="submit" name="enter" value="Autorization"><br>
-            <a href="reg.php">Зарегистрироваться</a>     
-        </form>';
+                echo '<form  method="post" action="index.php">
+                        <input type="text" name="e_login" placeholder="Login" required><br>
+                        <input type="password" name="e_password" placeholder="Password" required><br>
+                        <input type="submit" name="enter" value="Autorization" onclick=""><br>
+                        <a href="reg.php">Зарегистрироваться</a>     
+                    </form>';
             }

@@ -1,7 +1,8 @@
 <header>
+    
     <div id="logo">
        <img src="img/logo3.jpg">
-        <a href="/www/index.php?type=news" title="Перейти на главную">
+        <a href="/www/index.php" title="Перейти на главную">
         <h1>Workout</h1><br>
         <p>Информационный ресурс для тех кто хочет быть здоровым</p>
         
@@ -16,7 +17,7 @@
         </a>
         <?php
         //$admin='Natasha';
-        if(isset($_SESSION["name"])&& $_SESSION["name"]=='Natasha')
+        /*if(isset($_SESSION["name"])&& $_SESSION["name"]=='Natasha')
             echo '<a href="addNewArticle.php">
                     <div style="margin-right: 5%">Добавить статью</div>
                 </a>';
@@ -29,7 +30,7 @@
             echo '<a href="addIdeaArticle.php">
                     <div>Предложить идею для статьи</div>
                 </a>';
-        ?>
+        */?>
         
         
     </div>

@@ -6,7 +6,6 @@
         $title="Информация о нас";
         require_once "blocks/head.php";
         ?>
-        <script src="js/jquery.js"></script>
     </head>
     <body>
        <div id="wrap_wrapper">
@@ -19,6 +18,10 @@
                     <h2>Список понравившихся мне записей</h2>
                     
                     <?php echo $_SESSION["name"];
+                    
+                            if(($_SESSION[".$id."]===$value)&&$click==true){
+                                unset($_SESSION[".$id."]);
+                            }
                         foreach ($_SESSION as $value) {
                             echo $value;
                             $connection = mysql_connect("localhost", "root","");
@@ -26,6 +29,13 @@
                             if(!$connection||!$db){
 			        exit(mysql_error());
 			    }
+                            $id=$_GET['id'];
+                            $click=$_GET['click'];
+                            
+                            if(($_SESSION[".$id."]===$value)&&$click==true){
+                                unset($_SESSION[".$id."]);
+                                continue;
+                            }
                             if($value!=$_SESSION["name"]){
                             $result = mysql_query("SELECT * FROM articles WHERE id=$value");
                             //$row=mysql_fetch_array($result);  
@@ -42,31 +52,19 @@
                                 echo'<a href="article.php?type='.$row["type"].'&id='.$row["id"].'">
                                 <div class="more">Далее</div>
                                 </a>';
-                                echo '<a href="myOffice.php?id='.$row["id"].'">
-                                    <input name="delete" type="submit" value="Удалить" onClick="alert(\'Вы delete запись в личный кабинет!\')">
+                                echo '<a href="myOffice.php?id='.$row["id"].'&click=true">
+                                    <div>Delete</div>
                                     </a>';
                                 ?>
                           
                                 <div style="clear:both;"></div>
                                 </div>
                                 <?php } 
-                            }
-                        }  
-                     ?>
+                                }
+                            }  
+                         ?>
                     
                 </div>
-                <script>
-                    $(document).ready(function() {
-                        $("#delete").click(function() {
-                            <?php 
-                            $id=$_GET['id'];
-                            if($_SESSION[".$id."]===$value){unset($_SESSION[".$id."]);}
-                                ?>       
-                            );
-                        });
-                    });
-                </script>
-                
                 
             </div>
             <?php require_once "blocks/rightCol.php"?>
