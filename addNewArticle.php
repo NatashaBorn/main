@@ -35,12 +35,12 @@
                                . "VALUES('$title','$intro_text','$full_text','$date','$time','$type')");
 
                        mysql_close();
-                       echo 'Новость успешно добавлена!';
+                       echo '<span class="message" style="padding-left: 24%;">Статья успешно добавлена!</span>';
                     }
 
                    ?>
 
-                    <form method="POST" action="addNewArticle.php">
+                    <form method="POST" action="addNewArticle.php" style="margin-top: 10px;">
                         <input type="text" name="title" placeholder="Название статьи" required/><br>  
                         <textarea cols="20" rows="5" name="intro_text" placeholder="Короткое описание статьи" required></textarea><br />
                         <textarea cols="40" rows="10" name="full_text" placeholder="Полный текст для статьи" required></textarea><br />	  
@@ -55,7 +55,7 @@
                         </select>
                         <input type="hidden" name="date" value="<?php echo date('Y-m-d');?>"/>
                         <input type="hidden" name="time" value="<?php echo date('H:i:s');?>"/>
-                        <input type="submit" name="add" value="Добавить новость">
+                        <button name="add">Добавить новость</button>
                     </form>
 
                 </div>

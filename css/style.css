@@ -17,7 +17,7 @@ body{
     height: 100%;
     /*background: white url("../img/fon.jpg") repeat scroll 0% 0%;*/
     color: rgba(73, 58, 191, 0.87);
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: 0.85em;
     line-height: 135%;
         
@@ -29,13 +29,15 @@ img{
 }
 a{
     background-color: rgb(88,100,186,0.87);
-    color: white;
+    color: rgba(73, 58, 191, 0.87);
     /*border-radius: 15px;*/
     text-indent: 0;
     text-decoration: none;
+    
 }
 a:hover{
     color: #c61f52;
+    
 }
 a, a:hover{
     -webkit-transition:all.6s ease;
@@ -44,8 +46,16 @@ a, a:hover{
     -ms-transition:all.6s ease;
     transition: all.6s ease;
 }
+p{
+    margin: 15px;
+    text-align: justify;
+    text-indent: 15px;
+}
 .clear{
     clear: both;/*отделяет одну часть сайта от другой*/
+}
+ul,ul li{
+    margin: 5px 15px;
 }
 
 #wrap_wrapper{
@@ -106,12 +116,7 @@ header #menuHead div{
 }
 header #menuHead div:hover {
     background-color: #545784;
-}
-header #regAuth{
-    width: 20%;
-    float: left;
-    text-align: right;
-    font-size: 1em;
+    transition: all.6s ease;
 }
 /*Стили для для всего документа*/
 
@@ -126,8 +131,12 @@ header #regAuth{
 #wrapper #panel{
     width: 20%;
     float: left;
-    margin-left: 1%;
+    /*margin-left: 1%;*/
     
+}
+#wrapper #panel p{
+    margin: 0;
+    margin-top: 10px;
 }
 /*#panel {
     width: 20%;
@@ -146,7 +155,8 @@ header #regAuth{
 }
 #wrapper #panel .box div a:hover{
     transition: all.6s ease;
-    margin-right: 15px; 
+    margin-right: 15px;
+    background-color: #545784;
 }
 
 #wrapper #panel .box a{
@@ -164,6 +174,11 @@ header #regAuth{
     text-align: justify;
     text-indent: 15px;
 }
+#wrapper #leftCol .message{
+    font-size: 1.3em; 
+    padding-left: 20%; 
+    color: #c61f52;
+}
 #wrapper #leftCol #main{
     width: 100%;
     text-indent: 15px;
@@ -171,54 +186,50 @@ header #regAuth{
 #wrapper #leftCol #main p{
     text-indent: 15px;
 }
-#wrapper #leftCol #page {
-    text-align: center;
-}
-#wrapper #leftCol #page a{
-    /*border-radius: 5px;*/
-    background: rgba(122, 92, 222, 0.83);
-    margin: 10px;
-}
 #wrapper #leftCol #articles{
-    width: 90%;
-    padding: 10px;
-    background: #fff000;
-    margin-left: 10px;
+    width: 92%;
+    padding: 3%;
+    padding-top: 0%;
+    /*background: rgba(192, 192, 192, 0.67);*/
+    /*margin-left: 1%;*/
     margin-bottom: 15px;
     text-indent: 15px;
         
 }
 #wrapper #leftCol #articles img{
+    opacity: 0.75;
+    border-radius: 15px;
     float: left;
     width: 150px;
     height: 150px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px 15px;
+    
 }
+#wrapper #leftCol #articles a{
+    text-indent: 30px;
+}
+
 
 #wrapper #leftCol #articles .title{
     margin-bottom: 10px;
     text-align: center;
 }
+#wrapper #leftCol #articles .title:hover {
+    transition: all.6s ease;
+    color: #c61f52;
+    
+}
+#wrapper #leftCol #articles span{
+    margin-left: 15px;
+}
 
 #wrapper #leftCol h1{
+    text-align: center; 
+    margin-bottom: 10px;
     font-weight: normal;
     font-size: 1.4em;
     color: darkblue;
-    font-family: Comic Sans MS,sans-serif;
-}
-
-#wrapper #leftCol div.more{
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #939393;
-    color: #fff;
-    width: 10%;
-    text-align: center;
-    margin-top: 10px;
-}
-#wrapper #leftCol div.more:hover{
-    background-color: beige;
+    font-family: Tahoma,sans-serif;
 }
 
 #wrapper #leftCol input,#wrapper #leftCol button,#wrapper #leftCol select{
@@ -228,16 +239,17 @@ header #regAuth{
     border-radius: 5px;
     border: 2px solid silver;
     padding: 5px;
-    color: #ea7683;
+    color: rgba(73, 58, 191, 0.87);
     margin-bottom: 10px;
     font-size: 1.1em;
 }
 
 #wrapper #leftCol input:focus,#wrapper #leftCol textarea:focus,#wrapper #leftCol button:focus{
     border: 2px solid #9a83e5;
+    
 }
 #wrapper #leftCol button:hover{
-    border: 2px solid #333;
+    border: 2px solid #9a83e5;
     cursor: pointer;
 }
 #wrapper #leftCol textarea{
@@ -248,10 +260,27 @@ header #regAuth{
     border-radius: 5px;
     border: 2px solid silver;
     padding: 5px;
-    color: #ea7683;
+    color: rgba(73, 58, 191, 0.87);
     margin-bottom: 10px;
     font-size: 1.1em;
     resize: none;
+}
+#wrapper #leftCol #myOffice h3{
+    margin: 5px 20px 10px;
+}
+#wrapper #leftCol #ideas p,#wrapper #leftCol #ideas h1{
+    text-align: justify;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+#wrapper #leftCol #ideas {
+    margin-bottom: 10px;
+    border: 1px outset black;
+}
+#wrapper #leftCol #resultSearch {
+    margin-bottom: 10px;
+    border: 1px outset black;
+    padding: 5px;
 }
 
 /*Стили для правой колонки*/
@@ -260,20 +289,28 @@ header #regAuth{
     margin-right: 1%;
     float: right;
 }
+#wrapper #rightCol #form{
+    padding: 5px;
+}
 #wrapper #rightCol a {
-    background-color: #939393;
+   /* background-color: #939393;*/
     /*border-radius: 5px;*/
-    color: #ffffff;
-    margin-top: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    color: rgba(73, 58, 191, 0.87);
+    /*margin: 5px;*/
+    border-radius: 10px;
+    /*border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;*/
     clear: both;
     float: left;
     padding: 5px;
+    font-size: 1em;
 }
 #wrapper #rightCol a:hover { 
     transition: all.6s ease;
-    margin-left: 15px; 
+    /*margin-left: 15px; */
+    border-radius: 10px;
+    color: white;
+    background-color: #939393;
 }
 
 #wrapper #rightCol div{
@@ -292,8 +329,9 @@ header #regAuth{
     /*font-size: 0.85em;*/
 }
 
-#wrapper #rightCol input:focus{
+#wrapper #rightCol input:hover {
     border: 2px solid #9a83e5;
+    
 }
 
 #wrapper #panel .box a{
@@ -315,11 +353,11 @@ header #regAuth{
 /*Информация о нас*/
 
 #wrapper #leftCol #about_us {
-    width: 76%;
+    width: 86%;
     float: left;
     border: 1px solid silver;
     padding: 2%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: azure;
 }
 
@@ -354,4 +392,12 @@ footer #rights{
 
 #article {
     margin-bottom: 10px;
+}
+
+#likes {
+    width: 60%;
+}
+
+#unlikes {
+    width: 30%;
 }

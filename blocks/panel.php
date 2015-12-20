@@ -17,12 +17,8 @@
         <div style="margin-right: 5%">
             <p style="float: right;">Правильное питание</p><br>
             <a href="index.php?type=ration">Рацион</a><br>
-            <a href="#">Диеты</a><br>          
-            <a href="#">Таблицы</a><br>
+            <a href="index.php?type=diet">Диеты</a><br>
             <div style="clear:both;"></div>
         </div>
-    </div>
-    <div class="banner">
-        <img src="img/banner_2.jpg." alt="Баннер 2" title="Баннер 2">
     </div>
 </div>

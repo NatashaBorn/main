@@ -23,10 +23,10 @@
                 
             }
             if(isset($_SESSION["name"])&&($_SESSION["name"])==='Natasha'){
-                echo 'Добро пажаловать на свой сайт !<br>
+                echo '
                 <form  method="post" action="index.php">
-                    <a href="myOffice.php">Мой кабинет</a><br>
-                    <a href="ListIdeas.php">Предложенные идеи для статьи</a><br>
+                    <a href="myOffice.php">'.$_SESSION["name"].'</a><br>
+                    <a href="ListIdeas.php">Предложенные идеи <br> для статьи</a><br>
                     <a href="addNewArticle.php">Добавить новую статью</a><br>
                     <input type="submit" name="exit" value="Выход"><br>
                 </form>';
@@ -35,10 +35,9 @@
             }
             
             elseif(isset($_SESSION["name"])&&($_SESSION["name"])!='Natasha'){
-                echo $_SESSION["name"], 
-                    '<br>Добро пожаловать на наш сайт!<br>
+                echo '
                 <form  method="post" action="index.php">
-                    <a href="myOffice.php">Мой кабинет</a><br>
+                    <a href="myOffice.php">'.$_SESSION["name"].'</a><br>
                     <a href="addIdeaArticle.php">Предложить идею для статьи</a><br>
                     <input type="submit" name="exit" value="Выход"><br>
                 </form>';
@@ -49,7 +48,7 @@
                 echo '<form  method="post" action="index.php">
                         <input type="text" name="e_login" placeholder="Login" required><br>
                         <input type="password" name="e_password" placeholder="Password" required><br>
-                        <input type="submit" name="enter" value="Войти" onclick=""><br>
-                        <a href="reg.php" style="color: rgba(73, 58, 191, 0.87); background-color: inherit;">Зарегистрироваться</a>   
+                        <input type="submit" name="enter" value="Войти" onclick="">
+                        <a href="reg.php" style="color: rgba(73, 58, 191, 0.87); background-color: inherit;margin-top:0;">Зарегистрироваться</a>   
                     </form>';
             }

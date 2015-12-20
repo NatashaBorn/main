@@ -49,9 +49,7 @@
                     <p>Дата публикации: <?php echo $row['date'];?> / <?php echo $row['time'];?></p>
                     <p>Автор новости: <?php echo $row['author'];?></p>
                     <?php if(isset($_SESSION["name"])&& !isset($_SESSION[".$id."])){
-                        /*echo '
-                            <button id="like">Добавить в избранное</button> 
-                        ';*/
+                       
                         echo '<a href="article.php?type='.$type.'&id='.$row["id"].'&click=add">
                             <div>Добавить в избранное</div>
                         </a>';
@@ -62,7 +60,7 @@
                             </a>';
                     }
                     else{
-                        echo '*Чтобы добавить запись в личный кабинет необходимо зарегистрироваться';}
+                        echo '<span>* Чтобы добавить запись в личный кабинет необходимо зарегистрироваться</span>';}
                         ?>
                         
                     </div>

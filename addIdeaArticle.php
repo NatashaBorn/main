@@ -22,7 +22,7 @@
 			    exit(mysql_error());
 			}
 
-                    if(isset($_POST['add'])){
+                    if(isset($_POST['addIdeas'])){
                        $title= strip_tags(trim($_POST['title']));
                        $text=strip_tags(trim($_POST['text']));
                        $login=$_SESSION["name"];
@@ -31,14 +31,16 @@
                                . "VALUES('$title','$text','$login')");
 
                        mysql_close();
+                       
+                       echo '<span class="message">Идея статьи успешно отправлена!</span>';
                     }
 
                    ?>
 
-                    <form method="POST" action="addIdeaArticle.php">
+                    <form method="POST" action="addIdeaArticle.php" style="margin-top: 10px;">
                     <input type="text" name="title" placeholder="Название идеи" required/><br>  
                     <textarea name="text" placeholder="Описание идеи" required></textarea><br />	  
-                    <input type="submit" name="add" value="Предложить идею" onClick="alert('Идея успешно отправлена!')">
+                    <input type="submit" name="addIdeas" value="Предложить идею" onClick="">
                 </form>
 
                 </div>

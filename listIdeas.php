@@ -45,18 +45,18 @@
 
                 mysql_close();
                 $row=mysql_fetch_array($result);
-                //echo $row['title'];
 
-                while ($row = mysql_fetch_array($result)) { ?>        
-                <h1><?php echo $row['title'];?></h1>
-                <p><?php echo $row['text'];?></p>
-                <p>Автор новости: <?php echo $row['login'];?></p>
-                <?php echo '<a href="listIdeas.php?id='.$row["id"].'&click=true">
+                while ($row = mysql_fetch_array($result)) { ?> 
+                <div id="ideas">
+                <h1 style="text-align: left;"><?php echo $row['title'];?></h1>
+                <p>Описание: <?php echo $row['text'];?></p>
+                <p>Автор идеи: <?php echo $row['login'];?></p>
+                <?php echo '<a href="listIdeas.php?id='.$row["id"].'&click=true" style="text-indent: 20px;">
                     <div>Delete</div>
                     </a>';
                 ?>
+                </div>
                 
-                <hr/>	
                 <?php }?>
                 
             </div>

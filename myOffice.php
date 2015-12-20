@@ -15,15 +15,22 @@
            <?php require_once "blocks/panel.php"?>
             <div id="leftCol">
                  <div id="myOffice">
-                    <h2>Список понравившихся мне записей</h2>
                     
-                    <?php echo $_SESSION["name"];
+                     <h2 style="margin: 5px 20px 10px;"><?php echo $_SESSION["name"] ?>!</h2>
+                     <h3 style="margin: 5px 20px 10px;">Добро пожаловать в ваш личный кабинет!</h3>
                     
+                    <?php 
+                    $count=  count($_SESSION);
+                    if(isset($_SESSION)&&$count!=1)
+                        echo '<h3>Список понравившихся вам записей:</h3>';
+                    else {
+                        echo '<h3>Сюда вы может добавлять понравившиеся вам записи.</h3>';
+                        
+                    }
                             if(($_SESSION[".$id."]===$value)&&$click==true){
                                 unset($_SESSION[".$id."]);
                             }
                         foreach ($_SESSION as $value) {
-                            echo $value;
                             $connection = mysql_connect("localhost", "root","");
                             $db = mysql_select_db("Articles");
                             if(!$connection||!$db){
@@ -38,7 +45,7 @@
                             }
                             if($value!=$_SESSION["name"]){
                             $result = mysql_query("SELECT * FROM articles WHERE id=$value");
-                            //$row=mysql_fetch_array($result);  
+                            
                             mysql_close();
                             
                             if($row= mysql_fetch_array($result)) { ?> 
