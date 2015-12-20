@@ -49,7 +49,7 @@
                 echo '<form  method="post" action="index.php">
                         <input type="text" name="e_login" placeholder="Login" required><br>
                         <input type="password" name="e_password" placeholder="Password" required><br>
-                        <input type="submit" name="enter" value="Autorization" onclick=""><br>
-                        <a href="reg.php">Зарегистрироваться</a>     
+                        <input type="submit" name="enter" value="Войти" onclick=""><br>
+                        <a href="reg.php" style="color: rgba(73, 58, 191, 0.87); background-color: inherit;">Зарегистрироваться</a>   
                     </form>';
             }

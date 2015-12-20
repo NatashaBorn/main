@@ -8,17 +8,17 @@
 html{
     /*height: 100%;*/
     width: 100%;
-    //background-size: contain;
+    /*background-size: contain;*/
     background: white url("../img/fon.jpg") repeat scroll 0% 0%;
-    //background: white;
+    /*background: white;*/
 }
 body{
     width: 100%;
     height: 100%;
     /*background: white url("../img/fon.jpg") repeat scroll 0% 0%;*/
-    color: #333;
+    color: rgba(73, 58, 191, 0.87);
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 1em;
+    font-size: 0.85em;
     line-height: 135%;
         
 }
@@ -28,18 +28,21 @@ img{
     /*width: auto\9; для интернет эксплорер до 8*/
 }
 a{
-    color: #c61f52;
+    background-color: rgb(88,100,186,0.87);
+    color: white;
+    /*border-radius: 15px;*/
+    text-indent: 0;
     text-decoration: none;
 }
 a:hover{
-    color: #5c6ce6;
+    color: #c61f52;
 }
 a, a:hover{
     -webkit-transition:all.6s ease;
     -moz-transition:all.6s ease;
     -o-transition:all.6s ease;
     -ms-transition:all.6s ease;
-    transition: all.6s ease
+    transition: all.6s ease;
 }
 .clear{
     clear: both;/*отделяет одну часть сайта от другой*/
@@ -47,8 +50,9 @@ a, a:hover{
 
 #wrap_wrapper{
     overflow: hidden;
-    width: 945px;
-    margin: auto;
+    width: 75%;
+    margin: 25px auto auto;
+    border-radius: 15px;
     background-color: azure;
 }
 /*Стили для шапки*/
@@ -64,8 +68,8 @@ header{
 
 header #logo{
   /* background: white url("../img/logo3.jpg") repeat scroll 0% 0%;*/
-    height: 60%;
-    width: 100%;
+    /*height: 60%;*/
+    width: 85%;
     float: left;
     
 }
@@ -78,6 +82,7 @@ header #logo span{
     color: #e35367;
 }
 header #logo p{
+    
     color: rgba(73, 58, 191, 0.87);
     font-family: Times New Roman, sans-serif;
     font-size: 0.6em;
@@ -87,16 +92,17 @@ header #logo img{
 }
 
 header #menuHead{
-    height: 40%;
-    width: 100%;
+   /* height: 40%;*/
+    width: 15%;
     float: left;
 }
 header #menuHead div{
     float: left;
     padding: 5px;
-    background-color: coral;
+    background-color: #939393;
     border-radius: 5px;
     color: #ffffff;
+    margin-left: 10%;
 }
 header #menuHead div:hover {
     background-color: #545784;
@@ -120,7 +126,7 @@ header #regAuth{
 #wrapper #panel{
     width: 20%;
     float: left;
-    background: white;
+    margin-left: 1%;
     
 }
 /*#panel {
@@ -130,30 +136,46 @@ header #regAuth{
 }*/
 
 #wrapper #panel .box div a {
-    background-color: coral;
-    border-radius: 5px;
+    /*background-color: #939393;*/
+    /*border-radius: 5px;*/
     color: #ffffff;
     margin-top: 10px;
-    clear: both
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    clear: both;
+}
+#wrapper #panel .box div a:hover{
+    transition: all.6s ease;
+    margin-right: 15px; 
 }
 
 #wrapper #panel .box a{
-    float: left;
+    float: right;
     padding: 5px;
-    background-color: coral;
-    border-radius: 5px;
+    background-color: #939393;
+    /*border-radius: 5px;*/
     color: #ffffff;
 }
 #wrapper #leftCol{
-    width: 60%;
+    width: 56%;
     float: left;
     margin-right: 0%;
+    padding: 1%;
+    text-align: justify;
+    text-indent: 15px;
+}
+#wrapper #leftCol #main{
+    width: 100%;
+    text-indent: 15px;
+}
+#wrapper #leftCol #main p{
+    text-indent: 15px;
 }
 #wrapper #leftCol #page {
     text-align: center;
 }
 #wrapper #leftCol #page a{
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     background: rgba(122, 92, 222, 0.83);
     margin: 10px;
 }
@@ -178,13 +200,6 @@ header #regAuth{
     margin-bottom: 10px;
     text-align: center;
 }
-#wrapper #leftCol #bigArticle{
-    width: 78%;
-    margin-left: 10%;
-    background-color: bisque;
-    padding: 1%;
-    float: left;
-}
 
 #wrapper #leftCol h1{
     font-weight: normal;
@@ -196,7 +211,7 @@ header #regAuth{
 #wrapper #leftCol div.more{
     padding: 5px;
     border-radius: 5px;
-    background-color: coral;
+    background-color: #939393;
     color: #fff;
     width: 10%;
     text-align: center;
@@ -242,9 +257,51 @@ header #regAuth{
 /*Стили для правой колонки*/
 #wrapper #rightCol{
     width: 20%;
-    margin-left: 0%;
+    margin-right: 1%;
     float: right;
 }
+#wrapper #rightCol a {
+    background-color: #939393;
+    /*border-radius: 5px;*/
+    color: #ffffff;
+    margin-top: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    clear: both;
+    float: left;
+    padding: 5px;
+}
+#wrapper #rightCol a:hover { 
+    transition: all.6s ease;
+    margin-left: 15px; 
+}
+
+#wrapper #rightCol div{
+    margin: 5px;
+}
+#wrapper #rightCol #search, #wrapper #rightCol #auth{
+   border: 1px outset black;
+}
+#wrapper #rightCol input{
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #939393;
+    padding: 3px;
+    color: rgba(73, 58, 191, 0.87);
+    margin: 5px;
+    /*font-size: 0.85em;*/
+}
+
+#wrapper #rightCol input:focus{
+    border: 2px solid #9a83e5;
+}
+
+#wrapper #panel .box a{
+    float: right;
+    padding: 5px;
+    
+}
+
 /*#rightCol .banner{
     border: 2px;
     width: 20%;
@@ -253,6 +310,7 @@ header #regAuth{
     border: 2px solid silver;
     box-sizing: border-box;
 }*/
+
 
 /*Информация о нас*/
 
@@ -292,24 +350,6 @@ footer #rights{
     width: 50%;
     text-align: right;
     font-size: 1.1em;
-}
-
-.more {
-    
-}
-
-#panel {
-    width: 20%;
-    float: left;
-    margin-right:0;
-}
-
-#panel .box div a {
-    background-color: coral;
-    border-radius: 5px;
-    color: #ffffff;
-    margin-top: 10px;
-    clear: both
 }
 
 #article {

@@ -25,30 +25,26 @@
                 
                 $search=$_POST['search'];
                 
-                $click=$_GET['click'];
-                $id=$_GET['id'];
+                $result=mysql_query("SELECT * FROM articles WHERE title LIKE '%$search%'");
                 
-                if($click==true){
-                    mysql_query("DELETE FROM articles WHERE title='$search'");
-                }
-                
-                $result=mysql_query("SELECT * FROM articles WHERE title='$search'");
-
                 mysql_close();
                 //$row=mysql_fetch_array($result);
                 //echo $row['title'];
 
                 while ($row = mysql_fetch_array($result)) { ?>        
                 <h1><?php echo $row['title'];?></h1>
-                <p><?php echo $row['text'];?></p>
-                <p>Автор новости: <?php echo $row['login'];?></p>
-                <?php echo '<a href="search.php">
-                    <div>Delete</div>
-                    </a>';
-                ?>
+                <p><?php echo $row['intro_text'];?></p>
+                <?php echo'<a href="article.php?type='.$row['type'].'&id='.$row["id"].'">
+                    <div class="more">Далее</div>
+                    </a>';?>
                 
                 <hr/>	
-                <?php }?>
+                <?php }
+               if(!$result){
+                    echo 'Ничего не найдено';
+                }
+                
+                ?>
                 
                 
             </div>

@@ -40,28 +40,7 @@
 
                     });
                     
-                    /*$(document).ready(function(){
-                       $("#done").click(function(){
-                          var name=$("#name").val();
-                          var email=$("#email").val();
-                          var subject=$("#subject").val();
-                          var message=$("#message").val();
-                          var fail="";
-
-                          if(name.length < 3) fail = "Имя не меньше 3 символов";
-                          else if(email.split('@').length-1==0||email.split('.').length-1==0)
-                               fail="Вы ввели некорректный email";
-                          else if(subject.length<5)
-                               fail="Тема сообщения не менее 5 символов"; 
-                          else if(message.length<20)
-                               fail="Сообщение не менее 20 символов";
-                            if(fail !=""){
-                                $('#messageShow').html(fail + "<div class='clear'><br></div>");
-                                $('#messageShow').show();
-                                return false;
-                            }
-                       }); 
-                    });*/
+                    
                 </script>
             </div>
             <?php require_once "blocks/rightCol.php"?>
