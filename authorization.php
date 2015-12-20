@@ -25,10 +25,10 @@
             if(isset($_SESSION["name"])&&($_SESSION["name"])==='Natasha'){
                 echo '
                 <form  method="post" action="index.php">
-                    <a href="myOffice.php">'.$_SESSION["name"].'</a><br>
+                    <a href="myOffice.php">'.$_SESSION["name"].'</a>
+                    <input type="submit" name="exit" value="Выход"><br>
                     <a href="ListIdeas.php">Предложенные идеи <br> для статьи</a><br>
                     <a href="addNewArticle.php">Добавить новую статью</a><br>
-                    <input type="submit" name="exit" value="Выход"><br>
                 </form>';
                 
                 
@@ -37,9 +37,9 @@
             elseif(isset($_SESSION["name"])&&($_SESSION["name"])!='Natasha'){
                 echo '
                 <form  method="post" action="index.php">
-                    <a href="myOffice.php">'.$_SESSION["name"].'</a><br>
-                    <a href="addIdeaArticle.php">Предложить идею для статьи</a><br>
+                    <a href="myOffice.php">'.$_SESSION["name"].'</a>
                     <input type="submit" name="exit" value="Выход"><br>
+                    <a href="addIdeaArticle.php">Предложить идею для статьи</a><br>
                 </form>';
                 
                 

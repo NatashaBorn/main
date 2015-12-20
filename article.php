@@ -56,7 +56,7 @@
                     }
                     elseif (isset($_SESSION["name"])&&isset($_SESSION[".$id."])) {
                         echo '<a href="article.php?type='.$type.'&id='.$row["id"].'&click=delete">
-                                <div>Delete</div>
+                                <div>Удалить</div>
                             </a>';
                     }
                     else{

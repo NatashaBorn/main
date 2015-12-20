@@ -50,17 +50,21 @@
                             
                             if($row= mysql_fetch_array($result)) { ?> 
                                 <div id="articles">  
-                                <?php echo '<img src="img/articles/'.$row["type"].'/'.$row["id"].'.jpg">';?>
-                                <a href=""><h1 class="title"><?php echo $row['title'];?></h1></a>
+                                <?php echo'<a href="article.php?type='.$row['type'].'&id='.$row["id"].'">
+                                        <h1 class="title">'.$row['title'].'</h1>
+                                        </a>';?>
+                                <?php echo '<img src="img/articles/'.$row['type'].'/'.$row["id"].'.jpg">';?>
+                                
                                 <p><?php echo $row['intro_text'];?></p>
+                                <div style="clear:both;"></div>
                                 
                                     
                                 <?php 
-                                echo'<a href="article.php?type='.$row["type"].'&id='.$row["id"].'">
-                                <div class="more">Далее</div>
+                                echo'<a href="article.php?type='.$row["type"].'&id='.$row["id"].'" style="float: left;">
+                                <div class="more">Подробнее...</div>
                                 </a>';
                                 echo '<a href="myOffice.php?id='.$row["id"].'&click=true">
-                                    <div>Delete</div>
+                                    <div><center>Удалить</div>
                                     </a>';
                                 ?>
                           
