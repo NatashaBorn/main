@@ -85,8 +85,9 @@ header #logo{
 }
 header #logo a{
     color: #939393;
-    font-size: 2em;
+    font-size: 2.1em;
     font-family: Times New Roman, sans-serif;
+    text-align: 35px;
 }
 header #logo span{
     color: #e35367;
@@ -95,7 +96,7 @@ header #logo p{
     
     color: rgba(73, 58, 191, 0.87);
     font-family: Times New Roman, sans-serif;
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 header #logo img{
     float: left;

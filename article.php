@@ -44,7 +44,7 @@
                     ?> 
                     <div id="articles">
                     <h1><?php echo $row['title'];?></h1>
-                    <?php echo '<img src="img/articles/'.$row['type'].'/'.$id.'.jpg">';?>
+                    <?php echo '<img src="img/articles/'.$row['image'].'">';?>
                     <p><?php echo $row['full_text'];?></p>
                     <p>Дата публикации: <?php echo $row['date'];?> / <?php echo $row['time'];?></p>
                     <p>Автор новости: <?php echo $row['author'];?></p>
@@ -56,7 +56,7 @@
                     }
                     elseif (isset($_SESSION["name"])&&isset($_SESSION[".$id."])) {
                         echo '<a href="article.php?type='.$type.'&id='.$row["id"].'&click=delete">
-                                <div>Удалить</div>
+                                <div>Убрать из избранного</div>
                             </a>';
                     }
                     else{

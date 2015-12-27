@@ -53,7 +53,7 @@
                     <h1 class="title">'.$row['title'].'</h1>
                     </a>';?>    
                     
-                    <?php echo '<img src="img/articles/'.$row['type'].'/'.$row["id"].'.jpg">';?>
+                    <?php echo '<img src="img/articles/'.$row['image'].'">';?>
                     <p><?php echo $row['intro_text'];?></p>
                     
                     <div style="clear:both;"></div>

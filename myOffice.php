@@ -53,7 +53,7 @@
                                 <?php echo'<a href="article.php?type='.$row['type'].'&id='.$row["id"].'">
                                         <h1 class="title">'.$row['title'].'</h1>
                                         </a>';?>
-                                <?php echo '<img src="img/articles/'.$row['type'].'/'.$row["id"].'.jpg">';?>
+                                <?php echo '<img src="img/articles/'.$row['image'].'">';?>
                                 
                                 <p><?php echo $row['intro_text'];?></p>
                                 <div style="clear:both;"></div>
@@ -64,7 +64,7 @@
                                 <div class="more">Подробнее...</div>
                                 </a>';
                                 echo '<a href="myOffice.php?id='.$row["id"].'&click=true">
-                                    <div><center>Удалить</div>
+                                    <div><center>Убрать из избранного</div>
                                     </a>';
                                 ?>
                           

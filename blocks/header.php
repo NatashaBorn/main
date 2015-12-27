@@ -3,9 +3,9 @@
     <div id="logo">
            
         <a href="/www/index.php" title="Перейти на главную">
-        <img src="img/9.png" style="opacity: 0.85;margin: 2% 10px 1% 4%;border-radius: 70%;">
-        <h1 style="padding: 25px;">Workout | Будь в форме</h1>
-        <p style="padding: 5px; margin-left: 25px; margin: 0;">Информационный ресурс для тех кто хочет быть в форме</p>
+        <img src="img/logo.jpg" style="opacity: 0.85;margin: 2% 10px 1% 4%;border-radius: 70%;">
+        <h1 style="padding: 25px; margin-top: 15px; text-align: center;">Workout | Будь в форме</h1>
+        <p style="padding: 5px; margin:0;text-align:center; ">Информационный ресурс для тех кто хочет быть в форме</p>
         
         </a>
     </div>
